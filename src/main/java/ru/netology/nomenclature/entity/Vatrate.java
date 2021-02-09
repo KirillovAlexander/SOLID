@@ -1,5 +1,5 @@
 package ru.netology.nomenclature.entity;
 
-public enum VATRATE {
+public enum Vatrate {
     VAT_20,
 }

@@ -3,7 +3,7 @@ package ru.netology;
 import ru.netology.nomenclature.entity.Nomenclature;
 import ru.netology.nomenclature.entity.Product;
 import ru.netology.nomenclature.entity.Service;
-import ru.netology.nomenclature.entity.VATRATE;
+import ru.netology.nomenclature.entity.Vatrate;
 import ru.netology.nomenclature.repository.InProgramNomenclatureRepository;
 import ru.netology.payment.service.InProgramPayment;
 import ru.netology.payment.service.PaymentSystem;
@@ -37,25 +37,25 @@ public class Main {
                 "Молоко пастеризованное, 3 литра",
                 "МЛК3Л",
                 "Предназначено для употребления внутрь.",
-                VATRATE.VAT_20,
+                Vatrate.VAT_20,
                 3);
         Nomenclature product2 = createProduct("Молоко 1л.",
                 "Молоко пастеризованное, 1 литр",
                 "МЛК1Л",
                 "Предназначено для употребления внутрь.",
-                VATRATE.VAT_20,
+                Vatrate.VAT_20,
                 1);
         Nomenclature product3 = createProduct("Соленые огурцы 1кг.",
                 "Соленые огурцы, 1 килограмм",
                 "ОГРЧК",
                 "Предназначено для употребления внутрь. Не смешивать с молоком!",
-                VATRATE.VAT_20,
+                Vatrate.VAT_20,
                 1);
         Nomenclature service1 = createService("Доставка",
                 "Доставка продуктов",
                 "ДСТВК",
                 "Услуги по доставке заказанных продуктов.",
-                VATRATE.VAT_20,
+                Vatrate.VAT_20,
                 "Курьер");
 
         List<Nomenclature> nomenclatures = new ArrayList<>();
@@ -81,11 +81,11 @@ public class Main {
 
     }
 
-    private static Nomenclature createProduct(String shortName, String fullName, String code, String description, VATRATE vatrate, int weight) {
+    private static Nomenclature createProduct(String shortName, String fullName, String code, String description, Vatrate vatrate, int weight) {
         return new Product(shortName, fullName, code, description, vatrate, weight);
     }
 
-    private static Nomenclature createService(String shortName, String fullName, String code, String description, VATRATE vatrate, String responsible) {
+    private static Nomenclature createService(String shortName, String fullName, String code, String description, Vatrate vatrate, String responsible) {
         return new Service(shortName, fullName, code, description, vatrate, responsible);
     }
 

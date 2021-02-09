@@ -8,10 +8,10 @@ public abstract class Nomenclature {
     protected String code;
     protected String description;
     private final int id;
-    protected VATRATE vatrate;
+    protected Vatrate vatrate;
     private static int nextId = 0;
 
-    public Nomenclature(String shortName, String fullName, String code, String description, VATRATE vatrate) {
+    public Nomenclature(String shortName, String fullName, String code, String description, Vatrate vatrate) {
         this.shortName = shortName;
         this.fullName = fullName;
         this.code = code;
